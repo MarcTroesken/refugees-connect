@@ -7,8 +7,7 @@ new Vue({
     el: '#app',
 
     data: {
-        language: '0',
-        string: '',
+        language: '0'
     },
 
     ready: function() {
@@ -25,16 +24,6 @@ new Vue({
             } else {
                 var url = window.location.href;
                 window.location.replace(url + '/' + this.language);
-            }
-        },
-        search: function(e) {
-            e.preventDefault();
-            if(this.string != '') {
-                this.$http.get('search/' + this.string).success(function(response){
-                    console.log(response);
-                });
-            } else {
-                document.getElementById('string').focus();
             }
         },
     }
