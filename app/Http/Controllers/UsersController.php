@@ -87,6 +87,8 @@ class UsersController extends Controller
             $input = array_except($input, ['password', 'password_confirmation']);
         }
         
+        $user->camp()->update($input['camp']);
+
         $user->update($input);
 
         return redirect()->back()->withSuccess(Lang::get('content.update'));
