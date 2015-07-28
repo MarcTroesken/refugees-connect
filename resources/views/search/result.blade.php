@@ -10,6 +10,9 @@
         <div class="col-md-12">
             @unless($users->count() > 0)
                 <p class="lead text-center">{{ trans('content.noResult') }}</p>
+                <div class="text-center">
+                    <a class="btn btn-lg btn-primary" href="{{ url('/' . Session::get('lang')) }}">{{ trans('content.back') }}</a>
+                </div>
             @endunless
             @foreach($users->chunk(4) as $set)
                 <div class="row">

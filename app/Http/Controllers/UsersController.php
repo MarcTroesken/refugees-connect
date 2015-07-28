@@ -79,7 +79,15 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->user->findOrFail($id)->update($request->all());
+        $user = $this->user->findOrFail($id);
+        $input = $request->all();
+
+        if(empty($input['password']) && empty($input['password_confirmation']))
+        {
+            $input = array_except($input, ['password', 'password_confirmation']);
+        }
+        
+        $user->update($input);
 
         return redirect()->back()->withSuccess(Lang::get('content.update'));
     }

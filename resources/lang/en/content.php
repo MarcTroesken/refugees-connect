@@ -16,7 +16,7 @@ return [
 
     'submit' => 'Register',
     'save' => 'Save',
-    'back' => 'Zurück',
+    'back' => 'Back',
     'delete' => 'Delete Profile',
     'deleted' => 'Your profile was successfully deleted.',
     'register' => 'Register',
