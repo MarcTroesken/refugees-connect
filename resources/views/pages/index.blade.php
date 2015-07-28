@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div id="search-index" class="col-md-8 col-md-offset-2 text-center">
-            <img class="brand-big" src="{{ asset('images/logo.png') }}" alt="Logo Refugees Connect">
+            <img class="brand-big" src="{{ asset('images/Logo.png') }}" alt="Logo Refugees Connect">
             <form id="searchForm" action="{{ url('/search/' . Session::get('lang')) }}" method="POST" class="form-horizontal">
                 {{ csrf_field() }}
                 <div class="form-group has-feedback">
