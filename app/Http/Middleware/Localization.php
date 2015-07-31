@@ -16,7 +16,7 @@ class Localization
      */
     public function handle($request, Closure $next)
     {
-        $langArray = ['en' => 'English', 'de' => 'Deutsch'];
+        $langArray = ['en' => 'English', 'de' => 'Deutsch', 'sy' => 'العربية'];
         $lang = array_reverse(explode('/', $request->server('REQUEST_URI')))[0];
 
         if( ! array_key_exists($lang, $langArray) )

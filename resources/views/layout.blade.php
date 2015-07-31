@@ -62,6 +62,7 @@
                             <option value="0">Choose Language</option>
                             <option value="en">English</option>
                             <option value="de">Deutsch</option>
+                            <option value="sy">العربية</option>
                         </select>
                     </form>
                     <p>&copy 2015 &lt;/marc_troesken&gt; Development. All rights served!</p>
